@@ -6,7 +6,7 @@
 	$email = getGETParameter('email');
 	$email = $email . '.txt';
 	$direction = "C:/phplabs/lw3/4/data/";
-	chdir($direction);
+	chdir($direction);// меняем каталог
 	if (file_exists($email))
 	{
 		$handle = fopen($email, 'r');
