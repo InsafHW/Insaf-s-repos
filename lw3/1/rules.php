@@ -46,5 +46,12 @@
   substr($string, $start, $length)// Возвращает подстроку строки string, начинающейся с start символа по счету и длиной length символов.
   substr_count($string, $uwant)// возвращает число вхождений подстроки uwant в строку string.
   ctype_alpha($string)// Проверяет, все ли символы в переданной строке string являются буквенными.
+  str_replace(search, replace, subject)
+
+
+
+  chdir($directory)// Изменяет текущий каталог PHP на указанный в качестве параметра directory.
+  file_exists($file)// Проверяет наличие указанного файла или каталога.
+  fwrite($way, $string)// записывает содержимое string в файловый поток way.
   
 ?>
