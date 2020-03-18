@@ -10,9 +10,18 @@
 	if (file_exists($email))
 	{
 		$handle = fopen($email, 'r');
-		$data = file_get_contents($email);
+		$data = file($email);
 		fclose($handle);
-		echo $data;
+		$count = count($data);
+		for ($i = 0; $i < $count; $i++){
+			if ($data[$i] != null)
+			{
+				echo htmlspecialchars($data[$i]), '<br />';
+			}
+		
+		}
+
+	
 	}
 	else
 	{
