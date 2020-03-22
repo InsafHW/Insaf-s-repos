@@ -2,7 +2,7 @@
 {
 	max-width: 960px;
 	width: 100%;
-	margin: auto;
+	margin: 0 auto;
 
 }
 
@@ -12,7 +12,7 @@
 	margin-top: 100px;	
 }
 
-.myPhoto
+.avatar
 {
 	width: 330px;
 	height: 350px;
@@ -32,18 +32,16 @@
 
 .text
 {
+	font: italic 400 28px/28px Georgia, serif;
 	padding-top: 50px;
-	font-style: italic;
-	font: italic;
-	font-size: 28px;
 	color: #848484;
 	padding-left: 20px;
 }
 
-.main
+.main_container
 {
 	display: flex;
-	margin-top: 50px;
+	margin-top: 25px;
 }
 
 ul, ol
@@ -53,7 +51,7 @@ ul, ol
 
 .info
 {
-	padding-left: 117px;
+	padding-left: 150px;
 }
 
 .favorites
@@ -62,16 +60,10 @@ ul, ol
 	width: 100%;
 }
 
-.writers
+ul.writers_list>li
 {
-	margin-top: -4px;
-}
-
-ul.writers>li
-{
-	line-height: 30px;
-	font-family: Georgia;
-	font-size: 19px;
+	font: normal 400 19px/30px Georgia, serif;
+	color: #555555;
 }
 
 .border
@@ -85,22 +77,20 @@ ul.writers>li
 
 .favfilms
 {
+	font: normal 600 24px 'Open Sans', sans-serif;
 	margin-top: 63px;
 	color: #15a98c;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 600;
 }
 
-.films
+.films_list
 {
 	margin-top: 4px;
 }
 
-ol.films>li
+ol.films_list>li
 {
-	line-height: 26px;
-	font-family: Georgia;
-	font-size: 19px;
+	font: normal 400 19px/26px Georgia, serif;
+	color: #555555;
 }
 
 .write
@@ -110,47 +100,33 @@ ol.films>li
 
 .author
 {
-	font-weight: 600;
+	font: normal 600 16px 'Open Sans', sans-serif;
 	margin-top: 30px;
 	margin-left: 63px;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
 }
 
 .h2
 {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 24px;
+	font: normal 600 24px 'Open Sans', sans-serif;
 	color: #15a98c;
-	font-weight: 600;
 }
 
-.hooby
+.hobby_title
 {
-	font-weight: 400;
+	font: normal 400 36px 'Open Sans', sans-serif;
 	color: #333333;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 36px;
+	padding-top: 40px;
 }
 
 .h1
 {
-	font-family: 'Open Sans', sans-serif;
+	font: normal 700 48px 'Open Sans', sans-serif;
 	color: #333333;
-	font-weight: 700;
 }
 
 .info_text
 {
-	font-family: Georgia;
-	font-size: 19px;
-	color: #555555;
-}
-
-.hobby
-{
-	font-family: Georgia;
-	font-size: 19px;
+	font: normal 400 19px/35px Georgia, serif;
 	color: #555555;
 }
 
@@ -161,7 +137,6 @@ ol.films>li
 
 .write
 {
+	font: normal 400 19px Georgia, serif;
 	color: #15a98b;
-	font-family: Georgia;
-	font-size: 19px;
 }
