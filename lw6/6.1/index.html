@@ -3,7 +3,7 @@
 <head>
   <title>Profile</title>
   <meta charset="utf-8">
-	<link href=<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -70,29 +70,36 @@
 			<div class="content_films">
 				<h2 id="my_fav_films" class="h2">Любимые фильмы</h2>
 				<div class="content_fims_info">
-					<div class="content_films_info_1">
-						<div class="first_film_img"><img src="images/movies/movie_one.png" alt=""></div>
+					<div>
+						<div class="first_film_img">
+							<img src="images/movies/movie_one.png" alt="">
+						</div>
 						<h3 class="h3">Побег из Шоушенка</h3>
 						<p class="about_film">	
 							Успешный банкир Энди Дюфрейн обвинен в убийстве собственной жены и ее любовника. Оказавшись в тюрьме под названием Шоушенк, он сталкивается с жестокостью и беззаконием, царящими по обе стороны решетки. Каждый, кто попадает в эти стены, становится их рабом до конца жизни. Но Энди, вооруженный живым умом и доброй душой, отказывается мириться с приговором судьбы и начинает разрабатывать невероятно дерзкий план своего освобождения.
 						</p>
 					</div>
-					<div class="content_films_info_2">
-						<div class="second_film_img"><img src="images/movies/movie_two.png" alt=""></div>
+					<div>
+						<div class="second_film_img">
+							<img src="images/movies/movie_two.png" alt="">
+						</div>
 						<h3 class="h3">Наркоз</h3>
 						<p class="about_film">
 							Клай Бересфорд вынужден лечь под нож. Однако в процессе операции на сердце он неожиданно приходит в себя. Находясь в парализованном состоянии, будучи не в силах пошевелить ни рукой, ни ногой, он, тем не менее, чувствует каждое касание скальпеля к своей плоти…
 						</p>
 					</div>
-					<div class="content_films_info_3">
-						<div class="third_film_img"><img src="images/movies/movie_three.png" alt=""></div>
+					<div>
+						<div class="third_film_img">
+							<img src="images/movies/movie_three.png" alt="">
+						</div>
 						<h3 class="h3">Астрал</h3>
 						<p class="about_film">
 							Джош и Рене переезжают со своими детьми в новый дом, но не успевают толком распаковать вещи, как начинаются странные события. Необъяснимо перемещаются предметы, в детской звучат странные звуки… Но в настоящий ужас приходят родители, когда их десятилетний сын Далтон впадает в кому. Все усилия врачей в больнице помочь мальчику безуспешны.
 						</p>
 					</div>
-					<div class="content_films_info_4">
-						<div class="fourth_film_img"><img src="images/movies/movie_four.png" alt=""></div>
+					<div>
+						<div class="fourth_film_img">
+							<img src="images/movies/movie_four.png" alt=""></div>
 						<h3 class="h3">Гравитация</h3>
 						<p class="about_film">
 							Доктор Райан Стоун, блестящий специалист в области медицинского инжиниринга, отправляется в свою первую космическую миссию под командованием ветерана астронавтики Мэтта Ковальски, для которого этот полет — последний перед отставкой. Но во время, казалось бы, рутинной работы за бортом случается катастрофа. 
@@ -100,7 +107,9 @@
 						</p>
 					</div>
 				</div>
-				<div class="link"><a href="#" class="all_films">Все фильмы</a></div>
+				<div class="link">
+					<a href="#" class="all_films">Все фильмы</a>
+				</div>
 			</div>
 		</div>
 		<div class="bottom_form">
@@ -111,13 +120,13 @@
 			</div>
 			<form action="#" class="form" method="">
 				<span>Ваше имя</span><span class="red_star"> *</span>
-				<p class="name_p">
+				<div class="name_p">
 					<input type="text" class="user_name" name="first_name" value="">
-				</p>
-				<span>Ваш email *</span>
-				<p class="email_p">
+				</div>
+				<span>Ваш email</span><span class="red_star"> *</span>
+				<div class="email_p">
 					<input type="text" class="user_mail" name="email" value="">
-				</p>
+				</div>
 				<span>Откуда вы?</span><br>
 				<select name="country" class="country">
 					<option value="USA">США</option>
@@ -127,12 +136,15 @@
 				</select>
 				<br>
 				<span>Ваш пол</span><br>
-				<p class="gender_p">
-					<input checked type="radio" name="gender" value="Male">
-					<label>Мужской</label>
-				<input type="radio" name="gender" value="Female">	
-					<label>Женский</label>
-				</p>
+				<div class="gender_p">
+					<label>
+						<input checked type="radio" name="gender" value="Male">
+						Мужской
+					</label>
+				<label>
+					<input type="radio" name="gender" value="Female">Женский
+				</label>	
+				</div>
 				<span>Ваше сообщение</span> <span class="red_star">*</span><br>
 				<textarea class="message"></textarea>
 				<br>
