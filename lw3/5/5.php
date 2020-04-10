@@ -4,21 +4,32 @@
 		return isset($_GET[$parameter]) ?(string) $_GET[$parameter]: null;
 	}
 	$email = getGETParameter('email');
-	$email = $email . '.txt';
+	$file = $email . '.txt';
 	$direction = "C:/phplabs/lw3/4/data/";
-	chdir($direction);// меняем каталог
-	if (file_exists($email))
-	{
-		$handle = fopen($email, 'r');
-		while (!feof($handle))
+	if (chdir($direction)){
+		if (file_exists($file))
 		{
-			$data = fgets($handle);
-			echo nl2br($data);
+			$handle = fopen($file, 'r');
+			while (!feof($handle))
+			{
+				$data = fgets($handle);
+				if ($data == null)
+				{
+					echo " ";
+				}
+				else{
+					echo nl2br($data);
+				}
+			}
+			fclose($handle);	
 		}
-		fclose($handle);	
+		else
+		{
+			echo 'Пользователь не найден';
+		}
 	}
 	else
 	{
-		echo 'Пользователь не найден';
+		echo 'Ошибка в смене директории';
 	}
 ?>
