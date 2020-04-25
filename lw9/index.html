@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
   <title>Profile</title>
   <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="script/script.js"></script>
 </head>
   <body>  
     <div class="content">
@@ -62,14 +63,13 @@
             Люблю проводить время с друзьями, узнавать что-то новое.
             Заинтересован в изучении английского, а также во front-end.
           </p>
-          <a href="https://vk.com/miracle_insaf" class="write_to_me_link">
-            <span class="write_to_me_text">Напиши мне  →</span>
-          </a>
+          <a href="#write_to_me" class="write_to_me_link"><span class="write_to_me_text">Напиши мне  →</span></a>
         </div>
       </div>
     </div>
+    <div class="bottom_content">
       <div class="content_films">
-        <h2 id="my_fav_films" class="films_h2 h2">Любимые фильмы</h2>
+        <h2 id="my_fav_films" class="h2 film_h2">Любимые фильмы</h2>
         <div class="content_fims_info">
           <div>
             <div class="first_film_img">
@@ -100,8 +100,7 @@
           </div>
           <div>
             <div class="fourth_film_img">
-              <img src="images/movies/movie_four.png" alt="">
-            </div>
+              <img src="images/movies/movie_four.png" alt=""></div>
             <h3 class="h3">Гравитация</h3>
             <p class="about_film">
               Доктор Райан Стоун, блестящий специалист в области медицинского инжиниринга, отправляется в свою первую космическую миссию под командованием ветерана астронавтики Мэтта Ковальски, для которого этот полет — последний перед отставкой. Но во время, казалось бы, рутинной работы за бортом случается катастрофа. 
@@ -113,6 +112,46 @@
           <a href="#" class="all_films">Все фильмы</a>
         </div>
       </div>
+    </div>
+    <div class="bottom_form">
+      <div class="title" id="write_to_me">
+        <span class="left_line"></span>
+        Напиши мне
+        <span class="right_line"></span>
+      </div>
+      <form action="#" class="form" method="">
+        <span>Ваше имя</span><span class="red_star"> *</span>
+        <div class="name_p">
+          <input type="text" class="user_name" name="first_name" value="" required>
+        </div>
+        <span>Ваш email</span><span class="red_star"> *</span>
+        <div class="email_p">
+          <input type="text" class="user_mail" required name="email" value="">
+        </div>
+        <span>Откуда вы?</span><br>
+        <select name="country" class="country">
+          <option value="USA">США</option>
+          <option selected value="Russia">Россия</option>
+          <option value="Ukraniane">Украина</option>
+          <option value="Germany">Германия</option>
+        </select>
+        <br>
+        <span>Ваш пол</span><br>
+        <div class="gender_p">
+          <label>
+            <input checked type="radio" name="gender" value="Male">
+            Мужской
+          </label>
+        <label>
+          <input type="radio" name="gender" value="Female">Женский
+        </label>  
+        </div>
+        <span>Ваше сообщение</span> <span class="red_star">*</span><br>
+        <textarea required class="message"></textarea>
+        <br>
+        <input type="submit" value="Отправить" class="send">
+      </form>
+    </div>
       <div class="footer">
         © 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»
       </div>

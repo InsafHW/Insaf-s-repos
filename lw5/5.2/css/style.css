@@ -217,6 +217,11 @@ body
   color: #555555;
 }
 
+.films_h2
+{
+  padding-bottom: 30px;
+}
+
 .fav_writers_list li:last-child
 {
   margin-bottom: 30px;
