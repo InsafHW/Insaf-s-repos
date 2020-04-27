@@ -5,19 +5,8 @@ function isPrimeDigit(digit){
       console.log(digit + ' непростое число');
     }
     else{
-      for (let i = 2; i < digit; i++){
-        isPrime = true;
-        if ((digit % i) == 0){
-          isPrime = false;
-          break;
-        }
-      }
-      if (isPrime){
-        console.log(digit + ' простое число');
-      }
-      else{
-        console.log(digit + ' непростое число');
-      }
+      isPrime = isPrimeCheck(isPrime, digit);
+      primePrint(isPrime, digit);
     }
   }
   else if (typeof(digit) == 'object'){
@@ -32,24 +21,33 @@ function isPrimeDigit(digit){
           console.log(num + ' непростое число')
         }
         else{
-          for (let i = 2; i < num; i++){
-            isPrime = true;
-            if ((num % i) == 0){
-              isPrime = false;
-              break;
-            }
-          }
-          if (isPrime){
-            console.log(num + ' простое число');
-          }
-          else{
-            console.log(num + ' непростое число');
-          }
+          isPrime = isPrimeCheck(isPrime, num);
+          primePrint(isPrime, num);
         }
       }
     }
   }
   else{
     console.log('Неккоректный ввод')
+  }
+}
+
+function isPrimeCheck(isPrime, digit){
+  for (let i = 2; i < digit; i++){
+  isPrime = true;
+  if ((digit % i) == 0){
+    isPrime = false;
+    break;
+  }
+ }
+  return isPrime;
+}
+
+function primePrint(isPrime, digit){
+  if (isPrime){
+    console.log(digit + ' простое число');
+  }
+  else{
+   console.log(digit + ' непростое число');
   }
 }
