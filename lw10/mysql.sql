@@ -7,7 +7,7 @@ USE
 CREATE 
     TABLE faculty 
     (
-        id_faculty INT AUTO_INCREMENT NOT NULL,
+        faculty_id INT AUTO_INCREMENT NOT NULL,
         name VARCHAR(255) NOT NULL,
         PRIMARY KEY (id)
     );
@@ -15,7 +15,7 @@ CREATE
 CREATE
     TABLE group
     (
-        id_group INT AUTO_INCREMENT NOT NULL,
+        group_id INT AUTO_INCREMENT NOT NULL,
         name VARCHAR(255) NOT NULL,
         faculty_id INT NOT NULL,
         PRIMARY KEY (id),
@@ -25,7 +25,7 @@ CREATE
 CREATE
    TABLE student
     (
-        id_student INT AUTO_INCREMENT NOT NULL,
+        student_id INT AUTO_INCREMENT NOT NULL,
         first_name VARCHAR(255) NOT NULL,
         last_name VARCHAR(255) NOT NULL,
         age INT NOT NULL,
@@ -42,7 +42,7 @@ VALUES
     ('Faculty of Economics'),
     ('Faculty of Management and Law');
 INSERT INTO
-    group(name, faculty_id)
+    group(name, faculty_ids)
 VALUES
     ('PS-11', 1),
     ('PS-12', 1),
@@ -121,7 +121,7 @@ FROM
 JOIN
     group 
 ON
-    student.group_id = group.id_group
+    student.group_id = group.group_id
 WHERE
     group.name = 'PS-11';
 
@@ -135,11 +135,11 @@ FROM
 JOIN
     group
 ON
-    student.group_id = group.id_group
+    student.group_id = group.group_id
 JOIN
     faculty
 ON
-    group.faculty_id = faculty.id_faculty
+    group.faculty_id = faculty.faculty_id
 WHERE
     faculty.name = 'Faculty of Information Technologies and Computer Engineering';
 
@@ -154,10 +154,10 @@ FROM
 JOIN
     group
 ON
-    student.group_id = group.id_group
+    student.group_id = group.group_id
 JOIN
     faculty
 ON
-    group.faculty_id = faculty.id_faculty
+    group.faculty_id = faculty.faculty_id
 WHERE
     student.first_name = 'Alfir' AND student.last_name = 'Gimadiev'; 
