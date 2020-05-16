@@ -114,7 +114,7 @@ WHERE
 
 #4.2
 SELECT 
-    group.name AS 'Группа',
+    group.name AS 'Group',
     student.* 
 FROM 
     student
@@ -128,7 +128,7 @@ WHERE
 
 #4.3
 SELECT
-    faculty.name AS 'Факультет',
+    faculty.name AS 'Faculty',
     student.*
 FROM
     student
