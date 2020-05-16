@@ -1,43 +1,38 @@
 #CREATING TABLES
 CREATE
-    database lw10;
+    database university;
 USE
-    lw10;
+    university;
 
 CREATE 
     TABLE faculty 
-        (
-          id INT AUTO_INCREMENT NOT NULL,
-          name VARCHAR(255) NOT NULL,
-          PRIMARY KEY (id)
-        );
-
-CREATE
-    TABLE groups
     (
-       id INT AUTO_INCREMENT NOT NULL,
-       name VARCHAR(255) NOT NULL,
-       faculty_id INT NOT NULL,
-       PRIMARY KEY (id),
-       FOREIGN KEY (faculty_id) REFERENCES faculty(id)
+        id_faculty INT AUTO_INCREMENT NOT NULL,
+        name VARCHAR(255) NOT NULL,
+        PRIMARY KEY (id)
     );
 
 CREATE
-   TABLE students
+    TABLE group
     (
-        id            INT AUTO_INCREMENT NOT NULL,
-        first_name    VARCHAR(255)       NOT NULL,
-        age           INT                NOT NULL,
-        last_name     VARCHAR(255)       NOT NULL,
-        group_id      INT                NOT NULL,
+        id_group INT AUTO_INCREMENT NOT NULL,
+        name VARCHAR(255) NOT NULL,
+        faculty_id INT NOT NULL,
+        PRIMARY KEY (id),
+        FOREIGN KEY (faculty_id) REFERENCES faculty(id)
+    );
+
+CREATE
+   TABLE student
+    (
+        id_student INT AUTO_INCREMENT NOT NULL,
+        first_name VARCHAR(255) NOT NULL,
+        last_name VARCHAR(255) NOT NULL,
+        age INT NOT NULL,
+        group_id INT NOT NULL,
         PRIMARY KEY (id),
         FOREIGN KEY (group_id) REFERENCES group(id)
     );
-  
-
-       
-
-        
 
 #Initialization
 INSERT INTO 
@@ -47,7 +42,7 @@ VALUES
     ('Faculty of Economics'),
     ('Faculty of Management and Law');
 INSERT INTO
-    groups(name, faculty_id)
+    group(name, faculty_id)
 VALUES
     ('PS-11', 1),
     ('PS-12', 1),
@@ -59,7 +54,7 @@ VALUES
     ('FM-12', 3),
     ('FM-13', 3);
 INSERT INTO
-    students(first_name, last_name, age, group_id)
+    student(first_name, last_name, age, group_id)
 VALUES
     ('Artem', 'Ivanov', 18, 1),
     ('Ivan', 'Artemov', 19, 1),
@@ -106,56 +101,63 @@ VALUES
     ('Danila', 'Stantsov', 19, 9),
     ('Insaf', 'Halirahamnov', 18, 9),
     ('Alexey', 'Grozny', 19, 9);
+
+
 #4.1
 SELECT 
     *
 FROM
-    students
+    student
 WHERE
     age = 19;
+
+
 #4.2
 SELECT 
-    groups.name AS 'Группа',
-    students.* 
+    group.name AS 'Группа',
+    student.* 
 FROM 
-    students
+    student
 JOIN
-    groups 
+    group 
 ON
-    students.group_id = groups.id
+    student.group_id = group.id_group
 WHERE
-    groups.name = 'PS-11';
+    group.name = 'PS-11';
+
+
 #4.3
 SELECT
     faculty.name AS 'Факультет',
-    students.*
+    student.*
 FROM
-    students
+    student
 JOIN
-    groups
+    group
 ON
-    students.group_id = groups.id
+    student.group_id = group.id_group
 JOIN
     faculty
 ON
-    groups.faculty_id = faculty.id
+    group.faculty_id = faculty.id_faculty
 WHERE
     faculty.name = 'Faculty of Information Technologies and Computer Engineering';
+
 #4.4
 SELECT
     faculty.name,
-    groups.name,
-    students.first_name,
-    students.last_name
+    group.name,
+    student.first_name,
+    student.last_name
 FROM
-    students
+    student
 JOIN
-    groups
+    group
 ON
-    students.group_id = groups.id
+    student.group_id = group.id_group
 JOIN
     faculty
 ON
-    groups.faculty_id = faculty.id
+    group.faculty_id = faculty.id_faculty
 WHERE
-    students.first_name = 'Alfir' AND students.last_name = 'Gimadiev'; 
+    student.first_name = 'Alfir' AND student.last_name = 'Gimadiev'; 
