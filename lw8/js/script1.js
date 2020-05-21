@@ -51,25 +51,3 @@
 
 	}*/ 
 
-function swap(e) {
-	const slider = document.getElementsByClassName('content_fims_info')[0];
-	const whichButton = e.target.id;
-	let tempFilm = null;
-	if(whichButton === 'leftbtn') {
-		tempFilm = slider.firstElementChild;
-		tempFilm = slider.removeChild(tempFilm);
-		slider.append(tempFilm);
-	} else if (whichButton === 'rightbtn') {
-		tempFilm = slider.lastElementChild;
-		tempFilm = slider.removeChild(tempFilm);
-		slider.prepend(tempFilm);
-	}
-}
-
-function run() {
-	const leftbtn = document.getElementById	("leftbtn");
-	const rightbtn = document.getElementById('rightbtn');
-	leftbtn.addEventListener('click', swap);
-	rightbtn.addEventListener('click', swap);
-}
-window.onload = run;
