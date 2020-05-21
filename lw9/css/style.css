@@ -280,22 +280,17 @@ body
 
 .content_films
 {
-    padding-top: 60px;
+    padding-top: 5px;
     padding-left: 14px;
     max-width: 1200px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
-.content_fims_info
+.content_films_info
 {
     display: flex;
     justify-content: space-between;
-}
-
-.first_film_img img
-{
-    height: 190px;
-    width: 285px;
 }
 
 .h3
@@ -311,19 +306,7 @@ body
     max-width: 285px;
 }
 
-.second_film_img img
-{
-    height: 190px;
-    width: 285px;
-}
-
-.third_film_img img
-{
-    height: 190px;
-    width: 285px;
-}
-
-.fourth_film_img img
+.film_poster img
 {
     height: 190px;
     width: 285px;
@@ -492,6 +475,11 @@ body
     padding-right: 40px;
 }
 
+.slide_film
+{
+    margin-right: 15px;
+}
+
 .send
 {
     cursor: pointer;
@@ -502,4 +490,42 @@ body
     font: 19px Georgia, serif;
     color: #f5f5f5;
     background-color: #15a98c;
+}
+
+button
+{
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.leftbtn
+{
+    background-color: #f9f9f9;
+    position: relative;
+    left: 251px;
+    top: 240px;
+}
+
+.rightbtn
+{
+    background-color: #f9f9f9;
+    position: relative;
+    left: 1480px;
+    top: 240px;
+}
+
+.success img 
+{
+    position: absolute;
+    left: -50px;
+    top: 7px;
+}
+.success
+{
+    opacity: 0;
+    font-size: 18px;
+    position: relative;
+    left: 300px;
+    top: -50px;
 }
