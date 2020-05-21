@@ -37,17 +37,3 @@
 	// 		// cover.append(del_film);
 	// }
 
-	function slide(e) {
-		const slider = document.getElementsByClassName('content_films_info');
-		console.log(slider)
-		let btnTarget = this.id;
-		
-		let tempMovie;
-		if (btnTarget === 'leftbtn') {
-			tempMovie = slider.firstElementChild;
-			tempMovie = slider.removeChild(tempMovie);
-			slider.append(tempMovie);
-		}
-
-	}*/ 
-
