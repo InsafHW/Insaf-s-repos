@@ -385,7 +385,7 @@ body
     margin: 0 auto;
 }
 
-.user_name:focus, .country:focus, .user_mail:focus, .message:focus
+.focused:focus
 {
     outline-color: #15a98c;
 }
@@ -528,4 +528,10 @@ button
     position: relative;
     left: 300px;
     top: -50px;
+}
+
+.error_border
+{
+    border-color: #EE5252;
+    outline: none;
 }

@@ -2,7 +2,7 @@
   $first_name = $_POST['FirstName'];
   $email = $_POST['Email'];
   $message = $_POST['Message'];
-  if (preg_match('/[a-zA-Zа-ЯА-Я]/', $first_name)){
+  if (preg_match('/^[a-zA-Zа-яёА-ЯЁ\s\-]+$/u', $first_name)){
     $isCorrectName = TRUE;
   } else {
     $isCorrectName = FALSE;

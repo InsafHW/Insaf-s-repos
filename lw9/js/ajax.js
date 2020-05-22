@@ -1,7 +1,6 @@
 let form = document.getElementById('form');//Получили форму
 let successField = document.getElementById('success');//Поле для вывода
 let img = document.getElementById('success_img');
-img.style.opacity = '1';
 
 form.addEventListener('submit', function(event) {
   let first_name = document.getElementById('first_name');
@@ -33,19 +32,25 @@ form.addEventListener('submit', function(event) {
       let whichError = '';
       for(let i = 0; i < redTableCheck.length; i++) {
         if (redTableCheck[i] === 'name') {
-          whichError += 'id="first_name"';
-          first_name.style.border = '2px solid #EE5252';
+          whichError += 'id="first_name" ';
+          toError(first_name);
           successField.style.opacity = '0';
         }
         if (redTableCheck[i] === 'email') {
-          whichError += 'id="email"';
-          email.style.border = '2px solid #EE5252';
+          whichError += 'id="email" ';
+          toError(email);
           successField.style.opacity = '0';
         }
       }
+      if (whichError === 'id="first_name" ') {
+        delError(email);
+      }
+      if (whichError === 'id="email" ') {
+        delError(first_name);
+      }
       if (whichError === '') {
-        first_name.style.border = '2px solid #c9c9c9';
-        email.style.border = '2px solid #c9c9c9';
+        delError(email);
+        delError(first_name);
         successField.style.opacity = '1';
       }
     }
@@ -53,3 +58,12 @@ form.addEventListener('submit', function(event) {
   event.preventDefault();
 });
 
+function delError(element) {
+  element.classList.remove("error_border");
+  element.classList.add("focused");
+}
+
+function toError(element) {
+  element.classList.remove("focused");
+  element.classList.add("error_border");
+}
