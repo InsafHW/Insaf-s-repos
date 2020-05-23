@@ -1,24 +1,16 @@
 <?php
-  $first_name = $_POST['FirstName'];
+  $firstName = $_POST['FirstName'];
   $email = $_POST['Email'];
   $message = $_POST['Message'];
-  if (preg_match('/^[a-zA-Zа-яёА-ЯЁ\s\-]+$/u', $first_name)){
-    $isCorrectName = TRUE;
-  } else {
-    $isCorrectName = FALSE;
-  }
-  if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $isCorrectEmail = TRUE;
-  } else {
-    $isCorrectEmail = FALSE;
-  }
+  $isCorrectName = (preg_match('/^[a-zA-Zа-яёА-ЯЁ\s\-]+$/u', $firstName));
+  $isCorrectEmail = (filter_var($email, FILTER_VALIDATE_EMAIL));
   if (($isCorrectName) && ($isCorrectEmail)) {
-    echo "Ваше сообщение<br> успешно отправлено";
+    echo "1";//Все ОК
   } 
   if (!$isCorrectName) {
-    echo "In first name error ";
+    echo "2";//Ошибка в имени
   }
   if (!$isCorrectEmail) {
-    echo "In email error";
+    echo "3";//Ошибка в эмейле
   }
 ?>
