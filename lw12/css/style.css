@@ -130,9 +130,6 @@ span
     {
         font-size: 19px;
     }
-
-    
-
 }
 
 @media screen and (min-width: 981px)
@@ -153,13 +150,14 @@ span
 
 body
 {
-    background: url('../images/top/top.jpg') no-repeat center 0;
+    background: url('../images/top/top.jpg') no-repeat center 30px;
     
 }
 
 .my_photo
 {
     text-align: center;
+    padding-top: 15px;
 }
 
 .my_photo img
@@ -178,17 +176,20 @@ body
 .name
 {
     text-align: center;
+    margin-bottom: 0;
 }
 
 .my_name
 {
     font: 700 25px 'Open Sans', sans-serif;
     color: #fff;
+    margin-top: 0;
+    margin-bottom: 0px;
 }
 
 .quote
 {
-    font: italic 15px Georgia, serif;
+    font: italic 19px Georgia, serif;
     color: #fff;
     text-align: center;
 }
@@ -196,19 +197,34 @@ body
 .author
 {
     display: block;
-    font: 600 12px 'Open Sans', sans-serif;
+    font: 600 15px 'Open Sans', sans-serif;
 }
 
 @media screen and (min-width: 481px)
 {
     body
     {
-        background: url(../images/top/top.jpg) no-repeat center 30px;
+        background: url(../images/top/top.jpg) no-repeat center 40px;
     }
 
     .my_photo img
     {
         width: 250px;
+    }
+
+    .my_name
+    {
+        margin-top: 0;
+    }
+
+    .blockquote
+    {
+        margin-bottom: 0px;
+    }
+
+    .author
+    {
+        margin-top: 0;
     }
 }
 
@@ -217,6 +233,11 @@ body
     body
     {
         background: url(../images/top/top.jpg) no-repeat center 50px;
+    }
+
+    .blockquote
+    {
+        margin-bottom: 15px;
     }
 }
 
@@ -248,6 +269,12 @@ body
     .blockquote
     {
         font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .quote
+    {
+        margin-top: -30px;
     }
 
     .author
@@ -329,6 +356,7 @@ body
 {
     color: #333333;
     font: 27px 'Open Sans', sans-serif;
+    padding-top: 10px;
 }
 
 .write_to_me_link
@@ -343,22 +371,14 @@ body
     .my_hobby
     {
         font-size: 30px;
+        padding: 0;
     }
+
 }
 
-@media screen and (min-width: 769px)
+@media screen and (min-width: 600px) 
 {
-   .favorite_things
-   {
-       align-items: center;
-       padding-left: 0;
-   }
-}
-
-
-@media screen and (min-width: 769px)
-{
-   .favorite_films_and_writers
+    .favorite_films_and_writers
    {
        margin-top: 20px;
        display: flex;
@@ -370,10 +390,19 @@ body
        margin-right: 50px;
    }
 
+   .favorite_things
+   {
+       align-items: center;
+       padding-left: 0;
+   }
+}
+
+@media screen and (min-width: 769px)
+{
    .my_hobby
     {
-        font-size: 34px;
-        padding-left: 15px;
+        font-size: 32px;
+        padding-left: 0;
     }
 }
 
@@ -490,6 +519,7 @@ body
 .poster img
 {
     width: 280px;
+    border-radius: 4px;
 }
 
 .link
@@ -497,6 +527,7 @@ body
     margin-top: 5px;
     text-align: left;
     padding-left: 15px;
+    padding-bottom: 15px;
 }
 
 .all_films_link
@@ -589,11 +620,6 @@ body
         margin-top: 25px;
     }
 
-    .fav_films_description
-    {
-        padding-left: 0;
-    }
-
     .poster img
     {
         width: 285px;
@@ -619,6 +645,11 @@ body
     {
         flex-wrap: wrap;
         max-width: 1200px;
+    }
+
+    .fav_films_description
+    {
+        padding-left: 0;
     }
 
     .about_film
@@ -649,7 +680,8 @@ body
     text-align: center;
     font: 300 24px 'Open Sans', sans-serif;
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .title::before, .title::after
@@ -730,7 +762,7 @@ body
     height: 100px;
     color: #555;
     font: 22px 'Open Sans', sans-serif;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .name_field
@@ -803,7 +835,7 @@ body
 
 
 
-@media screen and (min-width: 1025px)
+@media screen and (min-width: 769px)
 {
     .message_field, 
     .message_inp, 
@@ -857,7 +889,8 @@ body
 
 .footer
 { 
-    padding-top: 5px 0;
+    padding: 15px;
+    height: 90px;
     max-width: 100%;
     margin: 0 auto;
     margin-top: 20px;
@@ -872,7 +905,7 @@ body
     .footer
     {
         margin-top: 20px;
-        padding-top: 8px;
+        padding-top: 10px;
     }
 }
 
