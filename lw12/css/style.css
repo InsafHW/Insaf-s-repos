@@ -1,19 +1,21 @@
-*
+* 
 {
     box-sizing: border-box;
 }
 
-input, select, textarea
+input,
+select,
+textarea 
 {
     display: block;
 }
 
-textarea
+textarea 
 {
     resize: none;
 }
 
-span
+span 
 {
     display: inline-block;
 }
@@ -25,11 +27,11 @@ span
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
-.nav a
+.nav a 
 {
+    display: inline-block;
     padding: 5px 0 0 0;
     display: block;
     height: 40px;
@@ -38,134 +40,49 @@ span
     font-family: Georgia;
     color: #333;
     font-size: 15px;
+    line-height: 30px;
 }
 
-.nav a:hover
+.nav a:hover 
 {
     background-color: #15a98c;
     color: #f5f5f5;
 }
 
-
-.about_me_link
+.about_me_link 
 {
-    width: 28%;
+    width: 25%;
 }
 
 .my_hobby_link
 {
-    width: 32%;
+    width: 30%;
 }
 
-.my_favorite_films_link
+.my_favorite_films_link 
 {
-    width: 40%;
-}
-
-@media screen and (min-width: 481px)
-{
-    .nav a
-    {
-        font-size: 18px;
-    }
-
-    .about_me_link::before
-    {
-        content: url('../images/icons/about_me_icon.png');
-        padding-right: 10px;
-    }
-
-    .my_hobby_link::before
-    {
-        content: url('../images/icons/hobby_icon.png');
-        padding-right: 10px;
-    }
-
-    .my_favorite_films_link::before
-    {
-        content: url('../images/icons/video_icon.png');
-        padding-right: 10px;
-        
-    }
-
-    .nav a.about_me_link:hover::before,
-    .nav a.my_hobby_link:hover::before,
-    .nav a.my_favorite_films_link:hover::before
-    {
-        filter: brightness(0) invert(1);
-    }
-}
-
-@media screen and (min-width: 500px) /*Промежуточная точка */
-{
-    .about_me_link
-    {
-        width: 140px;
-    }
-
-    .my_hobby_link
-    {
-        width: 160px;
-    }
-
-    .my_favorite_films_link
-    {
-        width: 240px;
-    }
-    .nav
-    {
-        justify-content: flex-start;
-    }
-
-    .nav a
-    {
-        height: 45px;
-        padding-top: 10px;
-    }
-}
-
-@media screen and (min-width: 769px)
-{
-    .nav a
-    {
-        font-size: 19px;
-    }
-}
-
-@media screen and (min-width: 981px)
-{
-    .content
-    {
-        max-width: 960px;
-        margin: 0 auto;
-    }
-
-    .nav a
-    {
-        height: 50px;
-    }
+    width: 45%;
 }
 
 /* Верхняя информация: имя, фото, любимая цитата, картинка background */
 
-body
+body 
 {
-    background: url('../images/top/top.jpg') no-repeat center 30px;
-    
+    background: url("../images/top/top.jpg") no-repeat center 30px;
 }
 
-.my_photo
+.my_photo 
 {
     text-align: center;
     padding-top: 15px;
 }
 
-.my_photo img
+.my_photo img 
 {
     width: 200px;
 }
 
-.general_info
+.general_info 
 {
     display: flex;
     flex-direction: column;
@@ -179,141 +96,30 @@ body
     margin-bottom: 0;
 }
 
-.my_name
+.my_name 
 {
-    font: 700 25px 'Open Sans', sans-serif;
+    font: 700 25px "Open Sans", sans-serif;
     color: #fff;
     margin-top: 0;
     margin-bottom: 0px;
 }
 
-.quote
+.quote 
 {
     font: italic 19px Georgia, serif;
     color: #fff;
     text-align: center;
 }
 
-.author
+.author 
 {
     display: block;
-    font: 600 15px 'Open Sans', sans-serif;
+    font: 600 15px "Open Sans", sans-serif;
 }
-
-@media screen and (min-width: 481px)
-{
-    body
-    {
-        background: url(../images/top/top.jpg) no-repeat center 40px;
-    }
-
-    .my_photo img
-    {
-        width: 250px;
-    }
-
-    .my_name
-    {
-        margin-top: 0;
-    }
-
-    .blockquote
-    {
-        margin-bottom: 0px;
-    }
-
-    .author
-    {
-        margin-top: 0;
-    }
-}
-
-@media screen and (min-width: 981px)
-{
-    body
-    {
-        background: url(../images/top/top.jpg) no-repeat center 50px;
-    }
-
-    .blockquote
-    {
-        margin-bottom: 15px;
-    }
-}
-
-@media screen and (min-width: 1025px)
-{
-    .nav
-    {
-        margin-bottom: 190px;
-    }
-
-    .my_photo img
-    {
-        width: 330px;
-    }
-
-    .general_info
-    {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .hover
-    {
-        display: flex;
-        
-        flex-direction: column-reverse;
-    }
-
-    .blockquote
-    {
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-
-    .quote
-    {
-        margin-top: -30px;
-    }
-
-    .author
-    {
-        display: block;
-        text-align: left;
-        font-style: normal;
-        font-size: 20px;
-        padding-left: 50px;
-    }
-    
-    .my_name
-    {
-        margin-top: 70px;
-        color: #333333;
-        font-size: 48px;
-        margin-bottom: 20px;
-    }
-
-    .border
-    {
-        width: 58px;
-        height: 4px;
-        color: #45c3aa;
-        background: #45c3aa;
-        border: 1px solid #45c3aa;
-        border-radius: 6px;
-        margin-left: 15px;
-    }
-}
-
-
-
 
 /* Обо мне, хобби, любимые писатели и фильмы */
 
-
-
-.favorite_things
+.favorite_things 
 {
     display: flex;
     align-items: flex-start;
@@ -322,7 +128,7 @@ body
     padding-left: 15px;
 }
 
-.about_me
+.about_me 
 {
     font: 20px Georgia, serif;
     color: #555555;
@@ -330,19 +136,20 @@ body
     line-height: 30px;
 }
 
-.fav
+.fav 
 {
-    font: 600 24px 'Open Sans', sans-serif;
+    font: 600 24px "Open Sans", sans-serif;
     color: #15a98c;
 }
 
-.fav_writers_list, .fav_films_list
+.fav_writers_list,
+.fav_films_list 
 {
     font: 19px Georgia, serif;
     color: #555555;
 }
 
-.fav_writers_list li
+.fav_writers_list li 
 {
     line-height: 30px;
 }
@@ -352,163 +159,52 @@ body
     line-height: 30px;
 }
 
-.my_hobby
+.my_hobby 
 {
     color: #333333;
-    font: 27px 'Open Sans', sans-serif;
+    font: 27px "Open Sans", sans-serif;
     padding-top: 10px;
 }
 
-.write_to_me_link
+.write_to_me_link 
 {
     font: 18px Georgia, serif;
     color: #32b49a;
     text-decoration: underline;
 }
 
-@media screen and (min-width: 480px)
+.green_arrow 
 {
-    .my_hobby
-    {
-        font-size: 30px;
-        padding: 0;
-    }
-
-}
-
-@media screen and (min-width: 600px) 
-{
-    .favorite_films_and_writers
-   {
-       margin-top: 20px;
-       display: flex;
-       justify-content: flex-start;
-   }
-
-   .fav_writers_block
-   {
-       margin-right: 50px;
-   }
-
-   .favorite_things
-   {
-       align-items: center;
-       padding-left: 0;
-   }
-}
-
-@media screen and (min-width: 769px)
-{
-   .my_hobby
-    {
-        font-size: 32px;
-        padding-left: 0;
-    }
-}
-
-@media screen and (min-width: 1025px)
-{
-    .my_photo
-    {
-        margin-bottom: 0;
-    }
-
-    .fav_writers_block
-    
-
-    .fav
-    {
-        margin-top: 0;
-    }
-    .favorite_films_and_writers
-    {
-        margin-top: 0;
-        display: block;
-        margin-right: 43px;
-    }
-
-    .fav_writers_list li
-    {
-        font-size: 19px;
-        line-height: 30px;
-    }
-
-    .fav_films_list li
-    {
-        font-size: 19px;
-        line-height: 30px;
-    }
-
-    .name
-    {
-        margin-left: 50px;
-    }
-
-    .about_me
-    {
-        margin-left: 55px;
-        font-size: 19px;
-        line-height: 30px;
-    }
-
-    .favorite_things
-    {
-        display: flex;
-        flex-direction: row-reverse;
-        
-    }
-
-    .blockquote
-    {
-        margin-left: 60px;
-        text-align: left;
-    }
-
-    .my_hobby
-    {
-        font-size: 36px;
-        padding-left: 0;
-        padding-top: 10px;
-    }
-
-    .author
-    {
-        font-size: 16px;
-    }
-
-    .all_films_link
-    {
-        margin-bottom: 50px;
-    }
+    color: #32b49a;
 }
 
 /*  ФИЛЬМЫ   */
 
-.cover_films
+.cover_films 
 {
     background-color: #f9f9f9;
     margin-bottom: 20px;
 }
-.fav_films_description
+.fav_films_description 
 {
     max-width: 1200px;
     margin: 0 auto;
     padding-left: 15px;
 }
 
-.slide
+.slide 
 {
     display: flex;
     flex-direction: column;
 }
 
-.h3
+.h3 
 {
-    font: bold 25px 'Open Sans', sans-serif;
+    font: bold 25px "Open Sans", sans-serif;
     margin-top: 0;
 }
 
-.about_film
+.about_film 
 {
     font: 19px/30px Georgia, serif;
     color: #555555;
@@ -516,13 +212,13 @@ body
     margin-bottom: 30px;
 }
 
-.poster img
+.poster img 
 {
     width: 280px;
     border-radius: 4px;
 }
 
-.link
+.link 
 {
     margin-top: 5px;
     text-align: left;
@@ -530,10 +226,12 @@ body
     padding-bottom: 15px;
 }
 
-.all_films_link
+.all_films_link 
 {
-    width: 140px;
+    width: 170px;
     text-decoration: none;
+    margin-top: 0;
+    margin-bottom: 30px;
     display: inline-block;
     font: 19px Georgia, serif;
     color: #f5f5f5;
@@ -546,283 +244,129 @@ body
     cursor: pointer;
 }
 
-@media screen and (min-width: 480px)
-{
-    .about_film
-    {
-        margin: 0 auto;
-        margin-bottom: 35px;
-        font-size: 18px;
-    }
-
-    .slide
-    {
-        text-align: center;
-    }
-
-    .link
-    {
-        text-align: center;
-        margin-top: 15px;
-        padding-left: 0;
-    }
-
-    .h3
-    {
-        margin-top: 0;
-    }
-}
-
-@media screen and (min-width: 769px)
-{
-    .slide
-    {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        max-width: 850px;
-        margin: 0 auto;
-        justify-content: space-around;
-    }
-
-    .Shawshank_Redemption
-    {
-        order: 0;
-    }
-
-    .Gravitation
-    {
-        order: 1;
-    }
-    .Awake
-    {
-        order: 2;
-    }
-    
-    .Insidious
-    {
-        order: 3;
-    }
-
-    .h3
-    {
-        font-size: 20px;
-        margin-top: 10px;
-    }
-
-    .about_film
-    {
-        font-size: 18px;
-    }
-
-    .link
-    {
-        margin-top: 25px;
-    }
-
-    .poster img
-    {
-        width: 285px;
-        height: 190px;
-    }
-}
-
-@media screen and (min-width: 1025px)
-{
-    .fav_films_description
-    {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .h3
-    {
-        text-align: left;
-        margin-top: 15px;
-    }
-
-    .slide
-    {
-        flex-wrap: wrap;
-        max-width: 1200px;
-    }
-
-    .fav_films_description
-    {
-        padding-left: 0;
-    }
-
-    .about_film
-    {
-        font-size: 16px;
-        line-height: 28px;
-        text-align: left;
-    }
-
-    .all_films_link
-    {
-        width: 220px;
-        height: 60;
-        padding-top: 15px;
-        font-size: 18px;
-    }
-
-    .Shawshank_Redemption, .Awake, .Insidious, .Gravitation
-    {
-        order: 0;
-    }
-}
-
 /*  ФОРМА */
 
-.title
+.callback 
+{
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.title 
 {
     text-align: center;
-    font: 300 24px 'Open Sans', sans-serif;
+    font: 300 24px "Open Sans", sans-serif;
     text-transform: uppercase;
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
-.title::before, .title::after
+.title::before,
+.title::after 
 {
-    content: '';
+    content: "";
     position: relative;
-    left: 0;
     top: -5px;
     display: inline-block;
     height: 1px;
-    width: 12%;
+    width: 40px;
     background: #c4c4c4;
 }
 
-.form
+.title::before 
 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #555;
-    font: 22px 'Open Sans', sans-serif;
+     right: 15px;
 }
 
-.country_field
+.title::after 
 {
-    width: 287px;
-    height: 40px;
-    margin-bottom: 50px;
+    left: 10px;
 }
 
-.country_field select
+[type="radio"] 
 {
-    margin-bottom: 100px;
-    width: 287px;
-    height: 50px;
-    background: url(../images/icons/arrow_down.png) 250px  no-repeat;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    font: 20px 'Open Sans', sans-serif;
+    display: inline;
 }
 
-.name_inp, .email_inp, .country_inp, .message_inp
+form 
 {
-    border-radius: 2px;
-    border: 2px solid #c9c9c9;
-    padding-left: 14px;
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #333;
+    font: 20px "Open Sans", sans-serif;
 }
 
-.name_inp:focus, .email_inp:focus, .country_inp:focus, .message_inp:focus
+.gender_p label:first-child 
 {
-    outline-color: #15a98c;
+    margin-right: 20px;
 }
 
-.gender label:first-child
-{
-    margin-right: 70px;
-}
-
-.male
-{
-    position: relative;
-    top: -20px;
-    left: 20px;
-}
-
-.female
-{
-    position: relative;
-    top: -20px;
-    left: 20px;
-}
-
-.message_field
-{
-    width: 290px;
-    resize: none;
-    height: 100px;
-    color: #555;
-    font: 22px 'Open Sans', sans-serif;
-    margin-bottom: 100px;
-}
-
-.name_field
-{
-    margin-bottom: 50px;
-    height: 50px;
-}
-
-.name_inp
-{
-    height: 50px;
-}
-
-.email_field
-{
-    margin-bottom: 50px;
-    height: 50px;
-}
-
-.email_inp
-{
-    height: 50px;
-}
-
-.country_field
-{
-    margin-bottom: 40px;
-}
-
-.gender
-{
-    margin-top: 5px;
-}
-
-.message_inp
-{
-    resize: none;
-    width: 290px;
-    height: 100px;
-}
-
-.gender_field
-{
-    width: 290px;
-    margin-top: 20px;
-}
-
-.gender
-{
-    display: flex;
-    padding: 0;
-}
-
-.red_star
+.red_star 
 {
     color: #ff0000;
 }
 
-.send
+.name_p,
+.email_p,
+.country,
+.gender_p,
+.message 
 {
+    margin-bottom: 20px;
+}
+
+.name_p,
+.user_name,
+.email_p,
+.user_mail,
+.country
+{
+    height: 40px;
+    width: 290px;
+}
+
+.message 
+{
+    width: 290px;
+    height: 120px;
+}
+
+.message 
+{
+    padding: 10px;
+}
+
+.user_name,
+.user_mail,
+.country,
+.message 
+{
+    padding-left: 10px;
+    color: #555;
+    font: 18px "Open Sans", sans-serif;
+}
+
+.user_name,
+.user_mail,
+.country,
+.message 
+{
+    border-radius: 2px;
+    border: 2px solid #c9c9c9;
+}
+
+.focus:focus 
+{
+    outline-color: #15a98c;
+}
+
+.send 
+{
+    margin-top: 35px;
+    margin-bottom: 35px;
     cursor: pointer;
     border: 1px solid #f5f5f5;
     border-radius: 5px;
@@ -833,62 +377,17 @@ body
     background-color: #15a98c;
 }
 
-
-
-@media screen and (min-width: 769px)
+.country 
 {
-    .message_field, 
-    .message_inp, 
-    .gender, 
-    .gender_field, 
-    .country_field,
-    .email_field,
-    .name_field
-    {
-        width: 540px;
-    }
-
-    .country_field select
-    {
-        width: 540px;
-        background: url(../images/icons/arrow_down.png) 500px no-repeat;
-        height: 45px;
-    }
-
-    .email_inp,
-    .name_inp
-    {
-        width: 540px;
-        height: 45px;
-    }
-
-    .send
-    {
-        margin-right: 320px;
-        margin-bottom: 50px;
-    }
-
-    .message_inp
-    {
-        padding-top: 10px;
-    }
-
-    .message_field, .message_inp
-    {
-        height: 150px;
-    }
-
-    .message_field
-    {
-        margin-bottom: 70px;
-    }
-
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url(../images/icons/arrow_down.png) no-repeat 250px 10px;
 }
 
 /* ПОДВАЛ */
 
-.footer
-{ 
+.footer 
+{
     padding: 15px;
     height: 90px;
     max-width: 100%;
@@ -900,20 +399,501 @@ body
     color: #555555;
 }
 
-@media screen and (min-width: 480px)
-{
-    .footer
+@media screen and (min-width: 360px) {
+    .footer 
+    {
+        padding-top: 22px;
+    }
+  }
+
+@media screen and (min-width: 481px) {
+    /* НАВИГАЦИЯ */
+    .nav a 
+    {
+        font-size: 18px;
+    }
+
+    .about_me_link::before 
+    {
+        content: url("../images/icons/about_me_icon.png");
+        padding-right: 10px;
+    }
+
+    .my_hobby_link::before 
+    {
+        content: url("../images/icons/hobby_icon.png");
+        padding-right: 10px;
+    }
+
+    .my_favorite_films_link::before 
+    {
+        content: url("../images/icons/video_icon.png");
+        padding-right: 10px;
+    }
+
+    .nav a.about_me_link:hover::before,
+    .nav a.my_hobby_link:hover::before,
+    .nav a.my_favorite_films_link:hover::before 
+    {
+        filter: brightness(0) invert(1);
+    }
+
+    .my_favorite_films_link 
+    {
+        line-height: 25px;
+    }
+
+    /* Верхняя информация: имя, фото, любимая цитата, картинка background */
+
+    body 
+    {
+        background: url(../images/top/top.jpg) no-repeat center 40px;
+    }
+    
+    .my_photo img 
+    {
+        width: 250px;
+    }
+
+    .my_name 
+    {
+        margin-top: 0;
+    }
+
+    .blockquote 
+    {
+        margin-bottom: 0px;
+    }
+
+    .author 
+    {
+        margin-top: 0;
+    }
+
+    /* Обо мне, хобби, любимые писатели и фильмы */
+
+    .my_hobby 
+    {
+        font-size: 30px;
+        padding: 0;
+    }
+
+    .about_film 
+    {
+        margin-bottom: 35px;
+        font-size: 18px;
+    }
+    
+    .slide 
+    {
+        text-align: left;
+    }
+
+    .link 
+    {
+        text-align: center;
+        margin-top: 15px;
+        padding-left: 0;
+    }
+
+    .h3 
+    {
+        margin-top: 0;
+    }
+
+    /* ФОРМА */
+
+    .title::before,
+    .title::after 
+    {
+        width: 110px;
+    }
+
+    .callback 
+    {
+        max-width: 450px;
+    }
+
+    .form 
+    {
+        max-width: 450px;
+    }
+
+    .name_p,
+    .user_name,
+    .email_p,
+    .user_mail,
+    .country 
+    {
+        height: 45px;
+        width: 450px;
+    }
+
+    .message 
+    {
+        width: 450px;
+        height: 150px;
+    }
+
+    .country 
+    {
+        background: url(../images/icons/arrow_down.png) no-repeat 400px 10px;
+    }
+
+    /* ПОДВАЛ */
+
+    .footer 
     {
         margin-top: 20px;
-        padding-top: 10px;
+        padding-top: 30px;
     }
 }
 
-@media screen and (min-width: 769px)
+@media screen and (min-width: 500px) /*Промежуточная точка */ 
 {
-    .footer
+    .about_me_link 
+    {
+        width: 140px;
+    }
+
+    .my_hobby_link 
+    {
+        width: 160px;
+    }
+
+    .my_favorite_films_link 
+    {
+        width: 240px;
+    }
+    .nav 
+    {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 600px) 
+{
+    .favorite_films_and_writers 
+    {
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-start;
+    }
+  
+    .fav_writers_block 
+    {
+        margin-right: 50px;
+    }
+  
+    .favorite_things 
+    {
+        align-items: flex-start;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .nav a 
+    {
+        font-size: 19px;
+    }
+
+    .my_hobby 
+    {
+        font-size: 32px;
+        padding-left: 0;
+    }
+
+    .content_film 
+    {
+        display: flex;
+    }
+    
+    .h3 
+    {
+        font-size: 20px;
+        margin-top: 0px;
+    }
+
+    .about_film 
+    {
+        font-size: 18px;
+        max-width: 550px;
+        padding-right: 15px;
+    }
+
+    .link 
+    {
+        margin-top: 25px;
+    }
+
+    .poster img 
+    {
+        width: 285px;
+        height: 190px;
+    }
+
+    .poster 
+    {
+        margin-right: 70px;
+    }
+
+    .footer 
     {
         padding-top: 28px;
         height: 70px;
+    }
+}
+
+@media screen and (min-width: 981px) 
+{
+    .content 
+    {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .nav a 
+    {
+        height: 50px;
+    }
+
+    body 
+    {
+        background: url(../images/top/top.jpg) no-repeat center 50px;
+    }
+    
+    .blockquote 
+    {
+        margin-bottom: 15px;
+    }
+}
+
+
+@media screen and (min-width: 1025px) 
+{
+    .nav 
+    {
+        margin-bottom: 190px;
+    }
+
+    .my_photo img 
+    {
+        width: 330px;
+    }
+
+    .general_info 
+    {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .hover 
+    {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .blockquote 
+    {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .quote 
+    {
+        margin-top: -30px;
+    }
+
+    .author 
+    {
+        display: block;
+        text-align: left;
+        font-style: normal;
+        font-size: 20px;
+        padding-left: 50px;
+    }
+
+    .my_name 
+    {
+        margin-top: 70px;
+        color: #333333;
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .border 
+    {
+        width: 58px;
+        height: 4px;
+        color: #45c3aa;
+        background: #45c3aa;
+        border: 1px solid #45c3aa;
+        border-radius: 6px;
+        margin-left: 15px;
+    }
+
+    .my_photo 
+    {
+        margin-bottom: 0;
+    }
+    
+    .fav 
+    {
+        margin-top: 0;
+    }
+    .favorite_films_and_writers 
+    {
+        margin-top: 40px;
+        display: block;
+        margin-right: 43px;
+    }
+
+    .fav_writers_list li 
+    {
+        font-size: 19px;
+        line-height: 30px;
+    }
+
+    .fav_films_list li 
+    {
+        font-size: 19px;
+        line-height: 30px;
+    }
+    
+    .name 
+    {
+        margin-left: 50px;
+    }
+
+    .about_me 
+    {
+        margin-left: 55px;
+        font-size: 19px;
+        line-height: 30px;
+    }
+
+    .favorite_things 
+    {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-left: 0;
+    }
+
+    .blockquote 
+    {
+        margin-left: 60px;
+        text-align: left;
+    }
+    
+    .my_hobby 
+    {
+        font-size: 36px;
+        padding-left: 0;
+        padding-top: 10px;
+    }
+
+    .author 
+    {
+        font-size: 16px;
+    }
+
+    .title::before,
+    .title::after 
+    {
+        width: 180px;
+    }
+
+    .callback 
+    {
+        max-width: 540px;
+    }
+
+    .form {
+        max-width: 540px;
+    }
+
+    .name_p,
+    .user_name,
+    .email_p,
+    .user_mail,
+    .country 
+    {
+        width: 540px;
+    }
+
+    .message 
+    {
+        width: 540px;
+    }
+
+    .country 
+    {
+        background: url(../images/icons/arrow_down.png) no-repeat 500px 10px;
+    }
+}
+
+@media screen and (min-width: 1200px) 
+{
+    .about_film 
+    {
+        max-width: 285px;
+    }
+
+    .poster 
+    {
+        margin-right: 0;
+    }
+    .slide 
+    {
+        display: flex;
+        flex-wrap: no-wrap;
+        flex-direction: row;
+        max-width: 1800px;
+        margin: 0 auto;
+        justify-content: space-around;
+    }
+
+    .content_film 
+    {
+        display: block;
+    }
+
+    .fav_films_description 
+    {
+        width: 1800px;
+        margin: 0 auto;
+    }
+
+    .h3 
+    {
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .fav_films_description 
+    {
+        padding-left: 0;
+        max-width: 1200px;
+    }
+
+    .about_film 
+    {
+        font-size: 16px;
+        line-height: 28px;
+        text-align: left;
+    }
+
+    .all_films_link 
+    {
+        margin-bottom: 50px;
+        width: 220px;
+        height: 60;
+        padding-top: 15px;
+        font-size: 18px;
+    }
+
+    .cover_films 
+    {
+        margin: 0 auto;
     }
 }
