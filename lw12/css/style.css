@@ -15,6 +15,11 @@ textarea
     resize: none;
 }
 
+select::-ms-expand 
+{
+    display: none;
+}
+
 span 
 {
     display: inline-block;
@@ -117,6 +122,17 @@ body
     font: 600 15px "Open Sans", sans-serif;
 }
 
+.hover
+{
+    width: 100%;
+}
+
+.about_me
+{
+    width: 100%;
+}
+
+
 /* Обо мне, хобби, любимые писатели и фильмы */
 
 .favorite_things 
@@ -125,7 +141,7 @@ body
     align-items: flex-start;
     flex-direction: column;
     margin-top: 0;
-    padding-left: 15px;
+    padding: 0 15px;
 }
 
 .about_me 
@@ -201,7 +217,12 @@ body
 .h3 
 {
     font: bold 25px "Open Sans", sans-serif;
-    margin-top: 0;
+    margin: 10px 0;
+}
+
+.content_film
+{
+    margin-bottom: 35px;
 }
 
 .about_film 
@@ -210,6 +231,7 @@ body
     color: #555555;
     max-width: 284px;
     margin-bottom: 30px;
+    margin-top: 0;
 }
 
 .poster img 
@@ -239,8 +261,9 @@ body
     background-color: #15a98c;
     border-radius: 4px;
     padding: 2px;
+    vertical-align: middle;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 16px;
     cursor: pointer;
 }
 
@@ -286,6 +309,7 @@ body
 [type="radio"] 
 {
     display: inline;
+    margin-right: 5px;
 }
 
 form 
@@ -355,12 +379,16 @@ form
 .message 
 {
     border-radius: 2px;
+    -webkit-border-radius: 2px; 
+    -moz-border-radius: 2px; 
+    -khtml-border-radius: 2px;
     border: 2px solid #c9c9c9;
 }
 
 .focus:focus 
 {
     outline-color: #15a98c;
+    border-color: #15a98c;
 }
 
 .send 
@@ -399,14 +427,22 @@ form
     color: #555555;
 }
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 358px)
+{
+    .favorite_things
+    {
+        padding-top: 25px;
+    }
+
     .footer 
     {
         padding-top: 22px;
     }
-  }
 
-@media screen and (min-width: 481px) {
+}
+
+@media screen and (min-width: 481px) 
+{
     /* НАВИГАЦИЯ */
     .nav a 
     {
@@ -449,26 +485,28 @@ form
     {
         background: url(../images/top/top.jpg) no-repeat center 40px;
     }
+
+    .my_name
+    {
+        font-size: 35px;
+    }
     
-    .my_photo img 
+    .blockquote
     {
-        width: 250px;
-    }
-
-    .my_name 
-    {
-        margin-top: 0;
-    }
-
-    .blockquote 
-    {
-        margin-bottom: 0px;
+        font-size: 23px;
     }
 
     .author 
     {
         margin-top: 0;
     }
+
+
+    .favorite_things
+    {
+        padding-top: 0;
+    }
+
 
     /* Обо мне, хобби, любимые писатели и фильмы */
 
@@ -494,11 +532,6 @@ form
         text-align: center;
         margin-top: 15px;
         padding-left: 0;
-    }
-
-    .h3 
-    {
-        margin-top: 0;
     }
 
     /* ФОРМА */
@@ -551,6 +584,8 @@ form
 
 @media screen and (min-width: 500px) /*Промежуточная точка */ 
 {
+    /* НАВИГАЦИЯ */
+
     .about_me_link 
     {
         width: 140px;
@@ -565,14 +600,35 @@ form
     {
         width: 240px;
     }
+
+    .about_film
+    {
+        max-width: 100%;
+        padding-right: 15px;
+    }
+
     .nav 
     {
         justify-content: flex-start;
     }
 }
 
+@media screen and (min-width: 586px)
+{
+    .favorite_things
+    {
+        padding-top: 25px;
+    }
+
+}
+
 @media screen and (min-width: 600px) 
 {
+    .about_me
+    {
+        max-width: 100%;
+    }
+
     .favorite_films_and_writers 
     {
         margin-top: 20px;
@@ -597,6 +653,11 @@ form
         font-size: 19px;
     }
 
+    .blockquote
+    {
+        font-size: 25px;
+    }
+
     .my_hobby 
     {
         font-size: 32px;
@@ -617,8 +678,7 @@ form
     .about_film 
     {
         font-size: 18px;
-        max-width: 550px;
-        padding-right: 15px;
+       
     }
 
     .link 
@@ -666,6 +726,7 @@ form
     {
         margin-bottom: 15px;
     }
+
 }
 
 
@@ -681,10 +742,20 @@ form
         width: 330px;
     }
 
+    .about_me
+    {
+        max-width: 570px;
+    }
+
     .general_info 
     {
         flex-direction: row;
         align-items: center;
+    }
+
+    .about_me p
+    {
+        margin-top: 10px;
     }
 
     .hover 
@@ -702,6 +773,11 @@ form
     .quote 
     {
         margin-top: -30px;
+    }
+
+    .favorite_things
+    {
+        padding-top: 0;
     }
 
     .author 
@@ -777,6 +853,7 @@ form
         display: flex;
         flex-direction: row-reverse;
         padding-left: 0;
+        padding-right: 0;
     }
 
     .blockquote 
@@ -789,7 +866,17 @@ form
     {
         font-size: 36px;
         padding-left: 0;
-        padding-top: 10px;
+        margin-top: 40px;
+    }
+
+    .about_film
+    {
+        padding-right: 0;
+    }
+
+    .hobby_film_title
+    {
+        padding-top: 50px;
     }
 
     .author 
