@@ -132,6 +132,10 @@ body
     width: 100%;
 }
 
+.about_me-paragraph {
+    margin-top: 0;
+}
+
 
 /* Обо мне, хобби, любимые писатели и фильмы */
 
@@ -726,6 +730,10 @@ form
     {
         margin-bottom: 15px;
     }
+
+    .about_me-paragraph {
+    margin-top: 15px;
+}
 
 }
 
