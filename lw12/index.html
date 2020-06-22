@@ -2,14 +2,12 @@
 <html lang="ru">
   <head>
     <title>Profile</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
   </head>
   <body>
     <div class="nav content">
@@ -19,7 +17,7 @@
     </div>
     <div class="general_info content">
       <div class="my_photo">
-        <img src="images/me.jpg" alt="" />
+        <img src="images/me.jpg" alt=""/>
       </div>
       <div class="hover">
         <div class="name">
@@ -47,9 +45,10 @@
           чем-то новом. Люблю проводить время с друзьями, узнавать что-то новое.
           Заинтересован в изучении английского, а также во front-end.
         </p>
-        <a href="" class="write_to_me_link"
-          >Напиши мне <span class="green_arrow">→</span></a
-        >
+        <a href="#contacts" class="write_to_me_link">
+          Напиши мне 
+          <span class="green_arrow">→</span>
+        </a>
       </div>
       <div class="favorite_films_and_writers">
         <div class="fav_writers_block">
@@ -148,27 +147,15 @@
       </div>
     </div>
     <div class="callback">
-      <div class="title">Напиши мне</div>
+      <div class="title" id="contacts">Напиши мне</div>
       <form action="#" class="form" method="">
         <span>Ваше имя</span> <span class="red_star"> *</span>
         <div class="name_p">
-          <input
-            type="text"
-            class="user_name focus"
-            name="first_name"
-            value=""
-            required
-          />
+          <input type="text" class="user_name focus" name="first_name" value="" required/>
         </div>
         <span>Ваш email</span> <span class="red_star">*</span>
         <div class="email_p">
-          <input
-            type="text"
-            class="user_mail focus"
-            required
-            name="email"
-            value=""
-          />
+          <input type="text" class="user_mail focus" required name="email" value=""/>
         </div>
         <span>Откуда вы?</span><br />
         <select name="country" class="country focus">
@@ -180,15 +167,15 @@
         <span>Ваш пол</span><br />
         <div class="gender_p">
           <label>
-            <input checked type="radio" name="gender" value="Male" />Мужской
+            <input checked type="radio" name="gender" value="Male"/>Мужской
           </label>
           <label>
-            <input type="radio" name="gender" value="Female" />Женский
+            <input type="radio" name="gender" value="Female"/>Женский
           </label>
         </div>
-        <span>Ваше сообщение</span> <span class="red_star">*</span><br />
+        <span>Ваше сообщение</span> <span class="red_star">*</span><br/>
         <textarea required class="message focus"></textarea>
-        <input type="submit" class="send" value="Отправить" />
+        <input type="submit" class="send" value="Отправить"/>
       </form>
     </div>
     <div class="footer">
