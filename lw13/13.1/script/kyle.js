@@ -1,11 +1,3 @@
-function drawKyle(ctx) {
-  drawLegsKyle(ctx);
-  drawBodyKyle(ctx);
-  drawHeadKyle(ctx);
-  drawCapKyle(ctx);
-  drawFaceKyle(ctx);
-}
-
 function drawLegsKyle(ctx) {
   //Штаны
   ctx.beginPath();
@@ -289,6 +281,14 @@ function drawCapKyle(ctx) {
   ctx.fill();
   ctx.stroke();
   ctx.closePath();
+}
+
+function drawKyle(ctx) {
+  drawLegsKyle(ctx);
+  drawBodyKyle(ctx);
+  drawHeadKyle(ctx);
+  drawCapKyle(ctx);
+  drawFaceKyle(ctx);
 }
 
 window.onload = function() {
